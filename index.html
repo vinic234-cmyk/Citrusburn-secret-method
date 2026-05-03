@@ -1,338 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CitrusBurn | Official Presentation</title>
-  <meta name="description" content="Discover CitrusBurn and learn how it may support your wellness journey." />
-  <meta name="google" content="translate" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CitrusBurn | Official Presentation</title>
+<meta name="description" content="Discover CitrusBurn and learn how it may support your wellness journey." />
+<meta name="google" content="translate" />
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
 
-    html {
-      height: 100%;
-    }
+body{
+  background: linear-gradient(135deg, #0f172a, #1e40af, #1e3a8a);
+  background-attachment: fixed;
+  color:#222;
+  line-height:1.6;
+}
 
-    body {
-      background: linear-gradient(135deg, #e3f2fd, #bbdefb);
-      color: #333333;
-      line-height: 1.6;
-      min-height: 100vh;
-      overflow-y: auto;
-    }
+/* LIVE BAR */
+#live-bar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:linear-gradient(90deg,#dc2626,#fb923c);
+  color:#fff;
+  text-align:center;
+  padding:8px;
+  font-size:14px;
+  font-weight:bold;
+  z-index:1000;
+}
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:60px 20px 100px;
+}
 
-    .hero, .section, .faq, .guarantee, .proof {
-      background: #ffffff;
-      border-radius: 8px;
-      padding: 40px;
-      margin-bottom: 30px;
-      border: 1px solid #e0e0e0;
-    }
+/* CARDS */
+.hero,.section,.faq,.guarantee,.proof{
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
+  border-radius:16px;
+  padding:30px;
+  margin-bottom:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
+  border:2px solid #fb923c;
+  transition:.3s;
+}
 
-    h1 {
-      font-size: 36px;
-      line-height: 1.2;
-      text-align: center;
-      margin-bottom: 20px;
-      color: #000000;
-    }
+.hero:hover,.section:hover,.faq:hover,.guarantee:hover,.proof:hover{
+  transform:translateY(-4px);
+}
 
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 28px;
-      color: #333333;
-    }
+h1{
+  font-size:38px;
+  text-align:center;
+  margin-bottom:20px;
+  color:#0f172a
+}
 
-    p {
-      text-align: center;
-      color: #666666;
-      margin-bottom: 15px;
-    }
+h2{
+  text-align:center;
+  margin-bottom:20px;
+  font-size:28px;
+  color:#1e3a8a
+}
 
-    .highlight {
-      color: #007bff;
-      font-weight: bold;
-    }
+p{text-align:center;color:#444}
 
-    .cta-btn {
-      display: inline-block;
-      background: #007bff;
-      color: #ffffff;
-      padding: 15px 30px;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-      animation: pulse 2s infinite;
-    }
+.highlight{color:#ea580c;font-weight:bold}
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
+/* CTA */
+.cta-btn{
+  display:inline-block;
+  background: linear-gradient(135deg, #fb923c, #dc2626);
+  color:#fff;
+  padding:18px 35px;
+  text-decoration:none;
+  font-size:20px;
+  font-weight:bold;
+  border-radius:12px;
+  transition:.3s;
+  animation:pulse 1.8s infinite;
+}
 
-    .cta-btn:hover {
-      background: #0056b3;
-    }
+.cta-btn:hover{transform:scale(1.06)}
 
-    .center {
-      text-align: center;
-    }
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(220,38,38,0.5)}
+  70%{box-shadow:0 0 0 15px rgba(220,38,38,0)}
+  100%{box-shadow:0 0 0 0 rgba(220,38,38,0)}
+}
 
-    .badges {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
+.center{text-align:center}
 
-    .badge {
-      background: #f8f9fa;
-      padding: 10px 15px;
-      border-radius: 5px;
-      font-size: 14px;
-      font-weight: bold;
-      border: 1px solid #dee2e6;
-    }
+.badges{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:20px
+}
 
-    .testimonial {
-      padding: 20px;
-      border-bottom: 1px solid #e0e0e0;
-      color: #333333;
-    }
+.badge{
+  background:#fff7ed;
+  padding:12px 20px;
+  border-radius:10px;
+  font-size:14px;
+  font-weight:bold;
+  border:1px solid #fb923c;
+}
 
-    .faq-item {
-      margin-bottom: 20px;
-    }
+.testimonial{
+  padding:20px;
+  border-bottom:1px solid #eee;
+}
 
-    .faq-item h3 {
-      margin-bottom: 8px;
-      color: #000000;
-    }
+.testimonial:hover{background:#fff7ed}
 
-    .countdown {
-      font-size: 24px;
-      font-weight: bold;
-      color: #dc3545;
-      text-align: center;
-      margin: 20px 0;
-    }
+/* NOTIF */
+#notif{
+  position:fixed;
+  bottom:90px;
+  left:20px;
+  background:#fff;
+  padding:12px 18px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
+  font-size:14px;
+  display:none;
+  z-index:999;
+  border-left:4px solid #fb923c;
+}
 
-    footer {
-      padding: 30px;
-      text-align: center;
-      color: #666666;
-      font-size: 14px;
-      border-top: 1px solid #e0e0e0;
-    }
+.sticky-cta{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  background:rgba(255,255,255,0.95);
+  padding:15px;
+  text-align:center;
+  border-top:2px solid #fb923c;
+}
 
-    .translator {
-      text-align: right;
-      margin-bottom: 15px;
-    }
+.countdown{
+  font-size:24px;
+  font-weight:bold;
+  color:#dc2626;
+  text-align:center;
+  margin:20px 0
+}
 
-    .video {
-      text-align: center;
-      margin: 30px 0;
-    }
+footer{
+  padding:30px;
+  text-align:center;
+  color:#e5e7eb;
+}
 
-    .video iframe {
-      width: 100%;
-      max-width: 800px;
-      height: 450px;
-      border: none;
-    }
-
-    .popup {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #28a745;
-      color: white;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      z-index: 1000;
-      display: none;
-      font-size: 14px;
-    }
-
-    .viewers {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      background: rgba(255,255,255,0.9);
-      color: #333;
-      padding: 10px 15px;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: bold;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      z-index: 999;
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 28px;
-      }
-      h2 {
-        font-size: 22px;
-      }
-      .cta-btn {
-        width: 100%;
-        text-align: center;
-      }
-      .video iframe {
-        height: 250px;
-      }
-    }
-  </style>
+@media(max-width:768px){
+  h1{font-size:28px}
+  h2{font-size:22px}
+  .cta-btn{width:100%}
+}
+</style>
 </head>
+
 <body>
+
+<div id="live-bar">🔥 <span id="viewers">32</span> people are viewing this page right now</div>
+
+<div id="notif"></div>
 
 <div class="container">
 
-  <div class="translator" id="google_translate_element"></div>
+<div id="google_translate_element"></div>
 
-  <div class="viewers" id="viewers">127 people are viewing this page now</div>
+<section class="hero">
+<h1>Discover The Natural Formula That Is Transforming Thousands of Lives</h1>
+<p>Learn how CitrusBurn may support your wellness journey with natural ingredients.</p>
 
-  <div class="popup" id="popup">John from NY just purchased CitrusBurn!</div>
+<div class="countdown" id="countdown"></div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Discover The Natural Formula That Is Transforming Thousands of Lives</h1>
-    <p>Learn how CitrusBurn may support your wellness journey with natural ingredients.</p>
+<div class="center">
+<a href="https://citrusburn.com/?&shield=6c9f3dva3znky7u7orvi393qr7" class="cta-btn" target="_blank">Get Access Now</a>
+</div>
 
-    <div class="countdown" id="countdown">Special Offer Ends In: 15:00</div>
+<div class="badges">
+<div class="badge">🔒 Secure Checkout</div>
+<div class="badge">✅ Satisfaction Guarantee</div>
+<div class="badge">🌍 Worldwide Shipping</div>
+</div>
+</section>
 
-    <div class="center">
-      <a href="https://citrusburn.com/?&shield=6c9f3dva3znky7u7orvi393qr7" class="cta-btn" target="_blank">
-        Get Access Now
-      </a>
-    </div>
+<section class="proof">
+<h2>What Customers Are Saying</h2>
 
-    <div class="badges">
-      <div class="badge">🔒 Secure Checkout</div>
-      <div class="badge">✅ Satisfaction Guarantee</div>
-      <div class="badge">🌍 Worldwide Shipping</div>
-    </div>
-  </section>
+<div class="testimonial">⭐⭐⭐⭐⭐<br>“More energy, better sleep, and I didn’t change my diet.”</div>
+<div class="testimonial">⭐⭐⭐⭐⭐<br>“I can actually see the results! Finally something that actually works!”</div>
+<div class="testimonial">⭐⭐⭐⭐⭐<br>“Once your metabolism resets, your body naturally burns more calories.”</div>
 
-  <!-- SOCIAL PROOF -->
-  <section class="proof">
-    <h2>What Customers Are Saying</h2>
+</section>
 
-    <div class="testimonial">
-      ⭐⭐⭐⭐⭐<br>
-      "More energy, better sleep, and I didn't change my diet."
-    </div>
+<section class="section">
+<h2>Why People Choose CitrusBurn</h2>
+<p><span class="highlight">Natural Ingredients</span> carefully selected to fit into your routine.</p>
+<p><span class="highlight">Simple Daily Use</span> designed for convenience.</p>
+<p><span class="highlight">Trusted by Customers</span> across multiple countries.</p>
+</section>
 
-    <div class="testimonial">
-      ⭐⭐⭐⭐⭐<br>
-      "I can actually see the results! Finally something that actually works!"
-    </div>
-
-    <div class="testimonial">
-      ⭐⭐⭐⭐⭐<br>
-      "Once your metabolism resets, your body naturally burns more calories, no matter what you eat."
-    </div>
-  </section>
-
-  <!-- BENEFITS -->
-  <section class="section">
-    <h2>Why People Choose CitrusBurn</h2>
-    <p><span class="highlight">Natural Ingredients</span> carefully selected to fit into your routine.</p>
-    <p><span class="highlight">Simple Daily Use</span> designed for convenience.</p>
-    <p><span class="highlight">Trusted by Customers</span> across multiple countries.</p>
-  </section>
-
-  <!-- GUARANTEE -->
-  <section class="guarantee">
-    <h2>Your Satisfaction Matters</h2>
-    <p>If the official product offers a satisfaction guarantee, you can highlight it here to reinforce buyer confidence.</p>
-  </section>
-
-  <!-- FAQ -->
-  <section class="faq">
-    <h2>Frequently Asked Questions</h2>
-
-    <div class="faq-item">
-      <h3>How do I order?</h3>
-      <p>Click the button above and follow the secure checkout process.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Is CitrusBurn available internationally?</h3>
-      <p>Availability depends on the official sales page and shipping options.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>How long does shipping take?</h3>
-      <p>Delivery times vary depending on your country and shipping method.</p>
-    </div>
-  </section>
-
-  <!-- FINAL CTA -->
-  <section class="hero">
-    <h2>Ready To Learn More?</h2>
-    <p>Click below to access the official CitrusBurn page.</p>
-
-    <div class="center">
-      <a href="https://citrusburn.com/?&shield=6c9f3dva3znky7u7orvi393qr7" class="cta-btn" target="_blank">
-        Access Official Page
-      </a>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 CitrusBurn. All rights reserved.</p>
-    <p>Disclaimer: Individual results may vary. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
-    <p>Privacy Policy | Terms & Conditions | Contact</p>
-  </footer>
+<section class="faq">
+<h2>Frequently Asked Questions</h2>
+<div class="faq-item"><h3>How do I order?</h3><p>Click the button above and follow the secure checkout process.</p></div>
+</section>
 
 </div>
 
-<script>
-  // Simulate live viewers
-  let viewers = 127;
-  setInterval(() => {
-    viewers += Math.floor(Math.random() * 3) - 1; // Random change
-    if (viewers < 100) viewers = 100;
-    document.getElementById('viewers').textContent = viewers + ' people are viewing this page now';
-  }, 5000);
+<div class="sticky-cta">
+<a href="https://citrusburn.com/?&shield=6c9f3dva3znky7u7orvi393qr7" class="cta-btn">Get CitrusBurn Now</a>
+</div>
 
-  // Show popup notifications
-  const messages = [
-    'John from NY just purchased CitrusBurn!',
-    'Sarah from CA just bought 2 bottles!',
-    'Mike from TX just got his order!',
-    'Emma from FL just secured her discount!'
-  ];
-  function showPopup() {
-    const popup = document.getElementById('popup');
-    popup.textContent = messages[Math.floor(Math.random() * messages.length)];
-    popup.style.display = 'block';
-    setTimeout(() => {
-      popup.style.display = 'none';
-    }, 4000);
-  }
-  setInterval(showPopup, 10000); // Show every 10 seconds
+<div id="notif"></div>
+
+<script>
+// VIEWERS
+setInterval(()=>{
+document.getElementById('viewers').innerText = Math.floor(Math.random()*15)+25;
+},4000);
+
+// COUNTDOWN LOOP
+let t=900;
+setInterval(()=>{
+if(t<=0) t=900;
+let m=Math.floor(t/60),s=t%60;
+document.getElementById('countdown').innerHTML=`Special Offer Ends In: ${m}:${s<10?'0':''}${s}`;
+t--;
+},1000);
+
+// NOTIF
+const names=["John","Emma","Lucas","Sophia"];
+const cities=["New York","London","Toronto","Sydney"];
+
+setInterval(()=>{
+let n=names[Math.floor(Math.random()*names.length)];
+let c=cities[Math.floor(Math.random()*cities.length)];
+let el=document.getElementById("notif");
+
+el.innerHTML=`✅ ${n} from ${c} just placed an order`;
+el.style.display="block";
+
+setTimeout(()=>el.style.display="none",4000);
+},7000);
 </script>
 
 </body>
