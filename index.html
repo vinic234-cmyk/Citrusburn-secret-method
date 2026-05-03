@@ -15,10 +15,16 @@
       font-family: 'Helvetica Neue', Arial, sans-serif;
     }
 
+    html {
+      height: 100%;
+    }
+
     body {
       background: #ffffff;
       color: #333333;
       line-height: 1.6;
+      min-height: 100vh;
+      overflow-y: auto;
     }
 
     .container {
@@ -162,8 +168,6 @@
       }
     }
   </style>
-  
-</style>
 </head>
 <body>
 
@@ -201,18 +205,17 @@
 
     <div class="testimonial">
       ⭐⭐⭐⭐⭐<br>
-      “More energy, better sleep, and I didn’t change my&nbsp;diet.”
+      "More energy, better sleep, and I didn't change my diet."
     </div>
 
     <div class="testimonial">
       ⭐⭐⭐⭐⭐<br>
-      “I can actually see the results! Finally something that actually&nbsp;works!”
+      "I can actually see the results! Finally something that actually works!"
     </div>
 
     <div class="testimonial">
       ⭐⭐⭐⭐⭐<br>
-      “Once your metabolism resets, your body naturally burns more calories,
-no matter what you eat.”
+      "Once your metabolism resets, your body naturally burns more calories, no matter what you eat."
     </div>
   </section>
 
@@ -269,55 +272,6 @@ no matter what you eat.”
   </footer>
 
 </div>
-
-<!-- STICKY MOBILE CTA -->
-<div class="sticky-cta">
-  <a href="https://citrusburn.com/?&shield=6c9f3dva3znky7u7orvi393qr7" class="cta-btn" target="_blank">Get CitrusBurn Now</a>
-</div>
-
-<!-- COUNTDOWN SCRIPT -->
-<script>
-let time = 900;
-const countdown = document.getElementById('countdown');
-const interval = setInterval(() => {
-  if (time <= 0) {
-    countdown.innerHTML = 'Special Offer Ends In: 00:00';
-    clearInterval(interval);
-    return;
-  }
-  let minutes = Math.floor(time / 60);
-  let seconds = time % 60;
-  countdown.innerHTML = `Special Offer Ends In: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-  time--;
-}, 1000);
-</script>
-
-<!-- GOOGLE TRANSLATE -->
-<script>
-function googleTranslateElementInit() {
-  try {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      includedLanguages: 'en,es,fr,de,it,pt,nl,sv,ja',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      autoDisplay: false
-    }, 'google_translate_element');
-  } catch (e) {
-    console.log('Google Translate failed to load');
-    document.getElementById('google_translate_element').style.display = 'none';
-  }
-}
-
-// Fallback if script fails to load
-window.addEventListener('load', function() {
-  setTimeout(function() {
-    if (!document.querySelector('#google_translate_element .goog-te-gadget')) {
-      document.getElementById('google_translate_element').style.display = 'none';
-    }
-  }, 3000);
-});
-</script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" onerror="document.getElementById('google_translate_element').style.display='none';"></script>
 
 </body>
 </html>
