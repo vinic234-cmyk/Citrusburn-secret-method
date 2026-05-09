@@ -1,305 +1,255 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8P7SRZD4V">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Y8P7SRZD4V');
-</script>
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>CitrusBurn | Official Presentation</title>
-<meta name="description" content="Discover CitrusBurn and learn how it may support your wellness journey." />
-<meta name="google" content="translate" />
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-
-body{
-  background: linear-gradient(135deg, #0f172a, #1e40af, #1e3a8a);
-  background-attachment: fixed;
-  color:#222;
-  line-height:1.6;
-  padding-bottom:120px;
-}
-
-#live-bar{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  background:linear-gradient(90deg,#dc2626,#fb923c);
-  color:#fff;
-  text-align:center;
-  padding:8px;
-  font-size:14px;
-  font-weight:bold;
-  z-index:1000;
-}
-
-.container{
-  max-width:1000px;
-  margin:auto;
-  padding:80px 20px 20px;
-}
-
-.hero,.section,.faq,.guarantee,.proof{
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(10px);
-  border-radius:16px;
-  padding:30px;
-  margin-bottom:25px;
-  box-shadow:0 10px 30px rgba(0,0,0,.15);
-  border:2px solid #fb923c;
-  transition:.3s;
-}
-
-.hero:hover,.section:hover,.faq:hover,.guarantee:hover,.proof:hover{
-  transform:translateY(-4px);
-}
-
-h1{
-  font-size:38px;
-  text-align:center;
-  margin-bottom:20px;
-  color:#0f172a
-}
-
-h2{
-  text-align:center;
-  margin-bottom:20px;
-  font-size:28px;
-  color:#1e3a8a
-}
-
-p{text-align:center;color:#444}
-
-.highlight{color:#ea580c;font-weight:bold}
-
-.cta-btn{
-  display:inline-block;
-  background: linear-gradient(135deg, #fb923c, #dc2626);
-  color:#fff;
-  padding:18px 35px;
-  text-decoration:none;
-  font-size:20px;
-  font-weight:bold;
-  border-radius:12px;
-  transition:.3s;
-  animation:pulse 1.8s infinite;
-}
-
-.cta-btn:hover{transform:scale(1.06)}
-
-@keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(220,38,38,0.5)}
-  70%{box-shadow:0 0 0 15px rgba(220,38,38,0)}
-  100%{box-shadow:0 0 0 0 rgba(220,38,38,0)}
-}
-
-.center{text-align:center}
-
-.badges{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
-  margin-top:20px
-}
-
-.badge{
-  background:#fff7ed;
-  padding:12px 20px;
-  border-radius:10px;
-  font-size:14px;
-  font-weight:bold;
-  border:1px solid #fb923c;
-}
-
-.testimonial{
-  padding:20px;
-  border-bottom:1px solid #eee;
-}
-
-.testimonial:hover{background:#fff7ed}
-
-#notif{
-  position:fixed;
-  bottom:90px;
-  left:20px;
-  background:#fff;
-  padding:12px 18px;
-  border-radius:12px;
-  box-shadow:0 10px 25px rgba(0,0,0,.2);
-  font-size:14px;
-  display:none;
-  z-index:999;
-  border-left:4px solid #fb923c;
-}
-
-.sticky-cta{
-  position:fixed;
-  bottom:0;
-  width:100%;
-  background:rgba(255,255,255,0.95);
-  padding:15px;
-  text-align:center;
-  border-top:2px solid #fb923c;
-}
-
-.countdown{
-  font-size:24px;
-  font-weight:bold;
-  color:#dc2626;
-  text-align:center;
-  margin:20px 0
-}
-
-footer{
-  padding:30px;
-  text-align:center;
-  color:#e5e7eb;
-}
-
-@media(max-width:768px){
-  h1{font-size:28px}
-  h2{font-size:22px}
-  .cta-btn{width:100%}
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CitrusBurn | Método Secreto Natural para Queimar Gordura</title>
+  <meta name="description" content="Descubra o CitrusBurn - o método secreto natural que está ajudando milhares de pessoas a queimarem gordura abdominal rapidamente." />
+  <meta name="google" content="translate" />
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8P7SRZD4V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Y8P7SRZD4V');
+  </script>
 </head>
 
 <body>
+  <!-- LIVE BAR -->
+  <div id="live-bar">
+    <span class="live-icon">🔴 AO VIVO</span>
+    <span id="viewers">42</span> pessoas estão vendo esta página agora
+  </div>
 
-<div id="live-bar">🔥 <span id="viewers">32</span> people are viewing this page right now</div>
+  <!-- NOTIFICATION -->
+  <div id="notif"></div>
 
-<div id="notif"></div>
+  <!-- GOOGLE TRANSLATE -->
+  <div id="google_translate_element"></div>
 
-<div class="container">
+  <div class="container">
+    
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-header">
+        <img src="logo.png" alt="CitrusBurn Logo" class="logo-main">
+        <h1>O Truque do Citrus Que Está<br><span class="highlight-text">Queimando Gordura Abdominal</span><br>em Semanas</h1>
+        <p class="hero-subtitle">Descubra como o CitrusBurn pode apoiar sua jornada de bem-estar com ingredientes 100% naturais</p>
+      </div>
 
-<div id="google_translate_element"></div>
+      <!-- BANNER MOB -->
+      <div class="banner-section">
+        <img src="banner-mob.png" alt="Banner CitrusBurn" class="banner-image">
+      </div>
 
-<section class="hero">
-<h1>This Natural “Citrus Trick” Is Helping People Burn Stubborn Belly Fat Faster</h1>
-<p>Learn how CitrusBurn may support your wellness journey with natural ingredients.</p>
+      <!-- COUNTDOWN -->
+      <div class="countdown" id="countdown"></div>
 
-<div class="countdown" id="countdown"></div>
+      <!-- CTA BUTTON -->
+      <div class="cta-wrapper">
+        <a href="https://citrusburn.com/?&shield=6c9f3dva3znky7u7orvi393qr7" class="cta-btn cta-primary" target="_blank">
+          ▶️ ASSISTIR VÍDEO OFICIAL AGORA
+        </a>
+        <p class="cta-subtitle">Descubra o método secreto dos famosos</p>
+      </div>
 
-<div class="center">
-<a href="https://citrusburn.com/?&shield=6c9f3dva3znky7u7orvi393qr7" class="cta-btn" target="_blank">Watch The Official Video</a>
-</div>
+      <!-- BADGES -->
+      <div class="badges">
+        <div class="badge">🔒 Checkout Seguro</div>
+        <div class="badge">✅ Garantia 60 Dias</div>
+        <div class="badge">🌍 Entrega Mundial</div>
+        <div class="badge">⭐ Melhor Avaliado</div>
+      </div>
+    </section>
 
-<div class="badges">
-<div class="badge">🔒 Secure Checkout</div>
-<div class="badge">✅ Satisfaction Guarantee</div>
-<div class="badge">🌍 Worldwide Shipping</div>
-</div>
-</section>
+    <!-- PRODUCTS SHOWCASE -->
+    <section class="products-section">
+      <h2>Nossos Produtos Premium</h2>
+      <div class="products-grid">
+        <div class="product-card">
+          <img src="product.png.png" alt="Produto CitrusBurn" class="product-image">
+          <h3>CitrusBurn Original</h3>
+          <p>Fórmula completa com ingredientes naturais selecionados</p>
+        </div>
+        <div class="product-card">
+          <img src="product2.png.png" alt="Produto CitrusBurn Premium" class="product-image">
+          <h3>CitrusBurn Premium Plus</h3>
+          <p>Versão potencializada com ingredientes exclusivos</p>
+        </div>
+      </div>
+    </section>
 
-<section class="proof">
-<h2>What Customers Are Saying</h2>
+    <!-- NATURAL INGREDIENTS -->
+    <section class="ingredients-section">
+      <h2>Ingredientes Naturais Selecionados</h2>
+      <div class="ingredients-grid">
+        <div class="ingredient-item">
+          <img src="ginger.png" alt="Gengibre Natural" class="ingredient-image">
+          <h3>Gengibre Natural</h3>
+          <p>Acelera o metabolismo naturalmente</p>
+        </div>
+        <div class="ingredient-item">
+          <img src="oranges.png" alt="Frutas Cítricas" class="ingredient-image">
+          <h3>Frutas Cítricas Premium</h3>
+          <p>Rica em vitaminas e antioxidantes</p>
+        </div>
+      </div>
+    </section>
 
-<div class="testimonial">⭐⭐⭐⭐⭐<br>“More energy, better sleep, and I didn’t change my diet.”</div>
-<div class="testimonial">⭐⭐⭐⭐⭐<br>“I can actually see the results! Finally something that actually works!”</div>
-<div class="testimonial">⭐⭐⭐⭐⭐<br>“Once your metabolism resets, your body naturally burns more calories.”</div>
+    <!-- SOCIAL PROOF -->
+    <section class="proof-section">
+      <h2>O Que Os Clientes Dizem</h2>
+      <img src="socialprove.png" alt="Avaliações dos Clientes" class="proof-image">
+      
+      <div class="testimonials">
+        <div class="testimonial">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Mais energia, melhor sono e não alterei minha dieta. É incrível!"</p>
+          <strong>Maria Silva - São Paulo</strong>
+        </div>
+        <div class="testimonial">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Posso realmente ver os resultados! Finalmente algo que realmente funciona!"</p>
+          <strong>João Santos - Rio de Janeiro</strong>
+        </div>
+        <div class="testimonial">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Depois que seu metabolismo se reequilibra, seu corpo naturalmente queima mais calorias."</p>
+          <strong>Ana Costa - Minas Gerais</strong>
+        </div>
+      </div>
+    </section>
 
-</section>
+    <!-- HARVARD CERTIFICATION -->
+    <section class="certification-section">
+      <h2>Certificado e Reconhecido</h2>
+      <img src="logosharvard.png" alt="Certificação Harvard" class="harvard-logo">
+      <p>Validado por institutos de pesquisa de renome internacional</p>
+    </section>
 
-<section class="section">
-<h2>Why People Choose CitrusBurn</h2>
-<p><span class="highlight">Natural Ingredients</span> carefully selected to fit into your routine.</p>
-<p><span class="highlight">Simple Daily Use</span> designed for convenience.</p>
-<p><span class="highlight">Trusted by Customers</span> across multiple countries.</p>
-</section>
+    <!-- WHY CHOOSE -->
+    <section class="why-section">
+      <h2>Por Que Escolher CitrusBurn?</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🌿</div>
+          <h3>Ingredientes Naturais</h3>
+          <p>Selecionados cuidadosamente para se encaixar em sua rotina diária</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">⚡</div>
+          <h3>Uso Simples</h3>
+          <p>Projetado para máxima conveniência e resultados rápidos</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🏆</div>
+          <h3>Confiado por Milhares</h3>
+          <p>Clientes satisfeitos em múltiplos países ao redor do mundo</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💯</div>
+          <h3>Garantia 100%</h3>
+          <p>Satisfação garantida ou seu dinheiro de volta em 60 dias</p>
+        </div>
+      </div>
+    </section>
 
-<section class="faq">
-<h2>Frequently Asked Questions</h2>
-<div class="faq-item"><h3>How do I order?</h3><p>Click the button above and follow the secure checkout process.</p></div>
-</section>
+    <!-- FAQ -->
+    <section class="faq-section">
+      <h2>Perguntas Frequentes</h2>
+      <div class="faq-item">
+        <h3>Como faço o pedido?</h3>
+        <p>Clique no botão "Assistir Vídeo" acima e siga o processo de checkout seguro. Leva menos de 5 minutos.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Quanto tempo até ver resultados?</h3>
+        <p>A maioria dos clientes reporta mudanças visíveis entre 2-4 semanas de uso consistente.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Tem efeitos colaterais?</h3>
+        <p>Não. CitrusBurn é feito com ingredientes 100% naturais. Consulte um médico se tiver dúvidas.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Qual é a garantia?</h3>
+        <p>Oferecemos garantia de satisfação de 60 dias. Se não estiver satisfeito, devolvemos 100% do seu dinheiro.</p>
+      </div>
+    </section>
 
-</div>
+  </div>
 
-<div class="sticky-cta">
-<a href="https://citrusburn.com/?&shield=6c9f3dva3znky7u7orvi393qr7" class="cta-btn">Watch The Official Video</a>
-</div>
+  <!-- STICKY CTA FOOTER -->
+  <div class="sticky-cta">
+    <a href="https://citrusburn.com/?&shield=6c9f3dva3znky7u7orvi393qr7" class="cta-btn cta-sticky" target="_blank">
+      ✅ QUERO COMEÇAR AGORA - CLIQUE AQUI
+    </a>
+    <p class="sticky-subtitle">Aproveite o desconto exclusivo antes que expire!</p>
+  </div>
 
-<div id="notif"></div>
+  <!-- FOOTER -->
+  <footer>
+    <p>🔒 Seguro • Confiável • Clientes em Todo o Mundo</p>
+    <p>© 2026 CitrusBurn™. Todos os Direitos Reservados.</p>
+    <p>Este site não é afiliado ou endossado pelo CitrusBurn oficial. Esta é uma página de revisão independente.</p>
+    <p>As declarações não foram avaliadas pela ANVISA. Este produto não se destina a diagnosticar, tratar, curar ou prevenir qualquer doença.</p>
+    <p>ClickBank® é o varejista deste produto. Podemos ganhar uma comissão se você comprar através de nosso link.</p>
+  </footer>
 
-<script>
-// VIEWERS
-setInterval(()=>{
-document.getElementById('viewers').innerText = Math.floor(Math.random()*15)+25;
-},4000);
+  <!-- SCRIPTS -->
+  <script>
+    // LIVE VIEWERS COUNTER
+    setInterval(()=>{
+      document.getElementById('viewers').innerText = Math.floor(Math.random()*25)+32;
+    }, 4000);
 
-// COUNTDOWN LOOP
-let t=900;
-setInterval(()=>{
-if(t<=0) t=900;
-let m=Math.floor(t/60),s=t%60;
-document.getElementById('countdown').innerHTML=`⚠️ Your Discount Expires In: ${m}:${s<10?'0':''}${s}`;
-t--;
-},1000);
+    // COUNTDOWN TIMER
+    let countdown = 900;
+    setInterval(()=>{
+      if(countdown <= 0) countdown = 900;
+      let minutes = Math.floor(countdown / 60);
+      let seconds = countdown % 60;
+      document.getElementById('countdown').innerHTML = 
+        `⚠️ SEU DESCONTO EXPIRA EM: <span class="timer">${minutes}:${seconds < 10 ? '0' : ''}${seconds}</span>`;
+      countdown--;
+    }, 1000);
 
-// NOTIF
-const names = [
-"James","Michael","Robert","David","William","Richard","Joseph","Thomas","Charles","Daniel",
-"Matthew","Anthony","Mark","Donald","Steven","Paul","Andrew","Joshua","Kenneth","Kevin",
-"Brian","George","Edward","Ronald","Timothy","Jason","Jeffrey","Ryan","Jacob","Gary",
-"Nicholas","Eric","Jonathan","Stephen","Larry","Justin","Scott","Brandon","Benjamin","Samuel",
-"Frank","Gregory","Raymond","Alexander","Patrick","Jack","Dennis","Jerry","Tyler","Aaron",
-"Jose","Adam","Henry","Nathan","Douglas","Zachary","Peter","Kyle","Walter","Ethan",
-"Noah","Christian","Albert","Dylan","Bruce","Jordan","Bryan","Gabriel","Logan","Alan",
-"Juan","Wayne","Roy","Ralph","Randy","Eugene","Vincent","Russell","Elijah","Louis",
-"Bobby","Philip","Johnny","Bradley","Mary","Patricia","Jennifer","Linda","Elizabeth",
-"Barbara","Susan","Jessica","Sarah","Karen","Nancy","Lisa","Betty","Margaret","Sandra",
-"Ashley","Kimberly","Emily","Donna","Michelle","Dorothy","Carol","Amanda","Melissa","Deborah"
-];
+    // NOTIFICATIONS
+    const names = [
+      "James","Michael","Robert","David","William","Richard","Joseph","Thomas","Charles","Daniel",
+      "Matthew","Anthony","Mark","Donald","Steven","Paul","Andrew","Joshua","Kenneth","Kevin",
+      "Brian","George","Edward","Ronald","Timothy","Jason","Jeffrey","Ryan","Jacob","Gary",
+      "Maria","Juliana","Fernanda","Camila","Beatriz","Carolina","Daniela","Leticia","Patricia","Sandra",
+      "Francisca","Nilda","Edna","Cleuza","Rita","Roseli","Lucia","Rosilene"
+    ];
 
-const cities = [
-"New York","Los Angeles","Chicago","Houston","Phoenix","Philadelphia","San Antonio","San Diego",
-"Dallas","San Jose","Austin","Jacksonville","San Francisco","Columbus","Charlotte","Indianapolis",
-"Seattle","Denver","Washington","Boston","Nashville","Detroit","Oklahoma City","Las Vegas",
-"Portland","Memphis","Louisville","Baltimore","Milwaukee","Albuquerque","Tucson","Fresno",
-"Sacramento","Kansas City","Long Beach","Mesa","Atlanta","Colorado Springs","Raleigh","Miami",
-"London","Manchester","Birmingham","Leeds","Glasgow","Liverpool","Bristol","Sheffield",
-"Toronto","Vancouver","Montreal","Calgary","Ottawa","Edmonton",
-"Sydney","Melbourne","Brisbane","Perth","Adelaide",
-"Dublin","Auckland","Amsterdam","Berlin","Paris","Madrid","Rome"
-];
-setInterval(()=>{
-let n=names[Math.floor(Math.random()*names.length)];
-let c=cities[Math.floor(Math.random()*cities.length)];
-let el=document.getElementById("notif");
+    const cities = [
+      "São Paulo","Rio de Janeiro","Belo Horizonte","Brasília","Salvador","Fortaleza",
+      "Manaus","Curitiba","Recife","Porto Alegre","Belém","Goiânia","Guarulhos","Campinas",
+      "São Gonçalo","São Luis","Duque de Caxias","Nova Iguaçu","Santo André","São Bernardo",
+      "New York","Los Angeles","Chicago","Houston","Phoenix","Miami","Boston","Seattle"
+    ];
 
-const actions = [
-"just placed an order",
-"just got access",
-"started using it",
-"just joined",
-"just claimed their discount"
-];
+    setInterval(()=>{
+      let name = names[Math.floor(Math.random() * names.length)];
+      let city = cities[Math.floor(Math.random() * cities.length)];
+      let el = document.getElementById("notif");
 
-let action = actions[Math.floor(Math.random()*actions.length)];
+      const actions = [
+        "acabou de fazer o pedido",
+        "conseguiu acesso",
+        "começou a usar",
+        "se juntou",
+        "reclamou seu desconto"
+      ];
 
-el.innerHTML = `✅ ${n} from ${c} ${action}`;
-  el.style.display="block";
-
-setTimeout(()=>el.style.display="none",4000);
-},7000);
-</script>
-
-<footer style="font-size:12px; color:#e5e7eb; text-align:center; padding:25px; max-width:900px; margin:auto; line-height:1.6;">
-  <p style="margin-bottom:10px;">🔒 Secure • Trusted • Worldwide Customers</p>
-  <p>© 2026 CitrusBurn™. All Rights Reserved.</p>
-  <p>This website is not affiliated with or endorsed by CitrusBurn. This is an independent review page.</p>
-  <p>Statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
-  <p>ClickBank® is the retailer of this product. We may earn a commission if you purchase through our link.</p>
-</footer>
-
+      let action = actions[Math.floor(Math.random() * actions.length)];
+      el.innerHTML = `✅ ${name} de ${city} ${action}`;
+      el.style.display = "block";
+      setTimeout(() => el.style.display = "none", 4000);
+    }, 7000);
+  </script>
 </body>
 </html>
